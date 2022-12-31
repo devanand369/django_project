@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>VARIABLE PAGE!</h1>
+
+    <h1><a href="{% url 'my_app:example' %}">CLICK ME TO GO TO EXAMPLE</a></h1>
+
+    {% comment %} <h2>My first name is {{first_name | lower | capfirst}} and my last name is {{last_name | lower | capfirst }}.</h2>
+    <h2>{{some_list}}</h2>
+    <h2>{{some_dict.inside_key}}</h2>
+    <h2>{# this is a comment #}</h2> {% endcomment %}
+
+    {% comment %} <ul>
+        {% for item in some_list %}
+            <li>{{item}}</li> 
+
+        {% endfor %}
+    </ul> {% endcomment %}
+
+    {% comment %} <ul>
+        {% for key, value in some_dict.items %}
+            <li>{{key}} : {{value}}</li> 
+                
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% if user_logged_in %}
+            <h1>Welcome back {{first_name | capfirst}}! </h1>
+        {% endif %}
+    </ul>
+
+    <ul>
+        {% for num in some_list %}
+            {% if num == 2 %}
+                <li>TWO</li>
+            {% else %}
+                <li>{{num}}</li>
+
+            {% endif %}
+
+        {% endfor %}
+    </ul> {% endcomment %}
+
+{% endblock %}

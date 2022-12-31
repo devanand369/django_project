@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School - Classroom</title>
+</head>
+<body>
+    <h1>
+        Welcome to Classroom Page!
+    </h1>
+    <ul>
+        <li>
+            <a href="{% url 'classroom:thank_you' %}">Thank You Page Link</a>
+        </li>
+        <li>
+            <a href="{% url 'classroom:contact' %}">Contact Page Link</a>
+        </li>
+        <li>
+            <a href="{% url 'classroom:create_teacher' %}">Create Teacher Page Link</a>
+        </li>
+        <li>
+            <a href="{% url 'classroom:list_teacher' %}">List Teacher Page Link</a>
+        </li>
+    </ul>
+</body>
+</html>
